@@ -15,7 +15,7 @@ spec:
     spec:
       containers:
       - name: spring-mongo-container
-        image: haythemkaouech/spring-mongo:FINAL
+        image: haythemkaouech/spring-mongo:complete
         ports:
         - containerPort: 8080
 
