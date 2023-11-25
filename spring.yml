@@ -32,4 +32,5 @@ spec:
   ports:
     - protocol: TCP
       port: 8080
-  type: ClusterIP
+      targetPort: 8080
+  type: LoadBalancer
