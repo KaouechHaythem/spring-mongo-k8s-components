@@ -24,7 +24,7 @@ spec:
 apiVersion: v1
 kind: Service
 metadata:
-  name: spring-boot-service
+  name: spring-boot-service.com
   namespace: default
 spec:
   selector:
