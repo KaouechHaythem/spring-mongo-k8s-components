@@ -14,7 +14,7 @@ spec:
     spec:
       containers:
         - name: frontend
-          image: haythemkaouech/spring-mongo-frontend:3
+          image: haythemkaouech/spring-mongo-frontend:final
           ports:
             - containerPort: 80
 
