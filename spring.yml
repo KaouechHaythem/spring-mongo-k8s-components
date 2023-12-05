@@ -12,12 +12,17 @@ spec:
     metadata:
       labels:
         app: spring-boot
+      annotations:
+        prometheus.io/scrape: "true"
+        prometheus.io/port: "8080"
+        prometheus.io/path: "/actuator/prometheus"  
     spec:
       containers:
       - name: spring-mongo-container
-        image: haythemkaouech/spring-mongo:done
+        image: haythemkaouech/spring-mongo:prom
         ports:
         - containerPort: 8080
+        
 
 ---
 
@@ -33,4 +38,5 @@ spec:
     - protocol: TCP
       port: 8080
       targetPort: 8080
+      name: http-port
   type: LoadBalancer
