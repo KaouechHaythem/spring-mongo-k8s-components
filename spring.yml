@@ -31,6 +31,8 @@ kind: Service
 metadata:
   name: spring-boot-service
   namespace: default
+  labels:
+    app: spring-boot
 spec:
   selector:
     app: spring-boot
