@@ -19,7 +19,7 @@ spec:
     spec:
       containers:
       - name: spring-mongo-container
-        image: haythemkaouech/spring-mongo:prom
+        image: haythemkaouech/spring-mongo:done
         ports:
         - containerPort: 8080
         
@@ -31,8 +31,6 @@ kind: Service
 metadata:
   name: spring-boot-service
   namespace: default
-  labels:
-    app: spring-boot
 spec:
   selector:
     app: spring-boot
@@ -40,5 +38,4 @@ spec:
     - protocol: TCP
       port: 8080
       targetPort: 8080
-      name: http-port
   type: LoadBalancer
